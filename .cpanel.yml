@@ -1,4 +1,6 @@
 ---
 deployment:
   tasks:
-    - /bin/cp -R * /home/workstone/public_html/ridhesh-bhati/
+    - export DEPLOYPATH=/home/workstone/public_html/ridhesh-bhati/
+    - /bin/cp -R * $DEPLOYPATH
+    - cd $DEPLOYPATH && npm install
